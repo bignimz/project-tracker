@@ -1,5 +1,8 @@
 <?php
 $title = 'Add Task';
+if (!empty($_GET['id'])) {
+    $title = "Update task";
+}
 
 ob_start();
 require 'nav.php';
@@ -44,7 +47,9 @@ require 'nav.php';
             <strong><abbr title="required">*</abbr></strong>
         </label>
         <input type="number" name="time" id="time" required>
-
+        <?php if (!empty($id)) { ?>
+            <input type="hidden" name="id" value="<?php echo $id ?>" />
+        <?php } ?>
         <input type="submit" name="submit" value="Add">
     </form>
 </div>

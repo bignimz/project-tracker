@@ -1,6 +1,7 @@
 <?php
 require_once "../model/model.php";
-require "common.php";
+
+$project_title = $category = '';
 
 if (isset($_POST['submit'])) {
     $title = trim($_POST['title']);

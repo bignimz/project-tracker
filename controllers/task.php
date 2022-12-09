@@ -1,6 +1,5 @@
 <?php
-require_once "../model/model.php";
-require "common.php";
+require_once "./model/model.php";
 
 $projects = get_all_projects();
 
@@ -17,11 +16,11 @@ if (isset($_POST['submit'])) {
         if (titleExists("tasks", $title)) {
             $error_message = "I'm sorry, but looks like " . escape($title) . " already exists";
         } else {
-            header('Refresh:4; url=task_list.php');
+            header('Refresh:4; url=/tasks/list');
             add_task($id, $title, $date, $time);
             $confirm_message = escape($title) . ' added successfully';
         }
     }
 }
 
-require "../views/task.php";
+require "./views/task.php";

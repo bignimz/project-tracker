@@ -8,7 +8,7 @@ CREATE TABLE projects (
 
 CREATE TABLE tasks (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(100) NOT NULL,
+    title VARCHAR(100) NOT NULL UNIQUE,
     date_task DATE NOT NULL,
     time_task INT(3) NOT NULL,
     project_id INT(11) NOT NULL,

@@ -19,9 +19,13 @@ require "../controllers/common.php";
 
     <ul>
         <?php foreach ($tasks as $task) : ?>
-        <li>
-            <?php echo escape($task["title"]) ?>
-        </li>
+            <li>
+                <?php echo escape($task["title"]) ?>
+                <form method="post">
+                    <input type="hidden" value="<?php echo $task["id"]; ?>" name="delete">
+                    <input type="submit" value="Delete">
+                </form>
+            </li>
         <?php endforeach; ?>
     </ul>
 </div>

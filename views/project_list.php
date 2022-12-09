@@ -19,9 +19,15 @@ require '../controllers/common.php';
 
     <ul>
         <?php foreach ($projects as $project) : ?>
+            <!-- Enabling to click and update a specific project id -->
         <li>
             <?php echo escape($project["title"]) ?>
+            <form method="post">
+                <input type="hidden" value="<?php echo $project["id"]; ?>" name="delete">
+                <input type="submit" value="Delete">
+            </form>
         </li>
+
         <?php endforeach; ?>
     </ul>
 </div>

@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="./project_list.php">Projects list</a></li>
-            <li><a href="./task_list.php">Tasks list</a></li>
-        </ul>
-    </nav>
-    <div>
-        <p>tracks time spent on your projects and tasks</p>
-    </div>
-    <h1>Project list(<?php echo $projectCount ?>)</h1>
-</body>
-</html>
+<?php
+$title = 'theTrackerApp';
+
+ob_start();
+require 'views/nav.php';
+
+?>
+<div class="welcome">
+    <h1>Welcome to theTrackerApp</h1>
+
+    <p>an app that helps you track time you spend on your favorite tasks</p>
+</div>
+<?php
+$content = ob_get_clean();
+include 'views/layout.php';
+?>
