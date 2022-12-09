@@ -1,0 +1,11 @@
+label {
+  display: block;
+}
+
+.message_ok {
+  background-color: green;
+}
+
+.message_error {
+  background-color: red;
+}
