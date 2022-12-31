@@ -17,7 +17,7 @@ ob_start();
     <div class="filter">
         <p>Filter by</p>
         <form method="get">
-            <select name="filter" id="project">
+            <select class="py-1" name="filter" id="project" style="width: 200px;">
                 <option value="">Select one</option>
 
                 <optgroup label="Projects">
@@ -44,7 +44,7 @@ ob_start();
         </form>
     </div>
 
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered mt-4">
         <thead>
             <tr>
                 <th>Task</th>
